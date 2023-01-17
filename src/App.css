@@ -1,9 +1,9 @@
-.bordo{
+.bordo {
   border: 1px solid white;
- width: fit-content;
+  width: fit-content;
 }
 
-.cella{
+.cella {
   border: 1px solid white;
   width: 100px;
   height: 100px;
@@ -13,18 +13,20 @@
   align-items: center;
 }
 
-.righe{
-  display:flex;
+.righe {
+  display: flex;
 }
 
-.centraTutto{
-  display:flex;
+.centraTutto {
+  display: flex;
   flex-direction: column;
   height: 100vh;
   align-items: center;
   justify-content: center;
+  background-color: #071c21;
+  color: white;
 }
 
-.vittoria{
-  color: green;
+.vittoria {
+  color: #C6DE41;
 }
