@@ -11,10 +11,10 @@ function App() {
     vittoria: false
   }
 
-  const [app, appState] = useState(statoIniziale);
+  const [app, appState] = useState(statoIniziale); // mi permette di aggiornare la grafica dell'applicazione "hook"
 
   function aggiornaStato(indice) {
-    const statoAggiornato = app.celle.map((elementoCorrente, index) => {
+    const statoAggiornato = app.celle.map((elementoCorrente, index) => {  // map mi ritorna una copia dell'array aggiornato
       if (index == indice) {
         if (elementoCorrente == 'x') {
           return 'o';
@@ -86,7 +86,7 @@ function App() {
 
 
   appState({
-    ...app,
+    ...app, //spread operator mi permette di prendere il contenuto di un oggetto e merlo dentro ad un altro
     celle: statoAggiornato,
     prossimaMossa: app.prossimaMossa == "x" ? "o" : "x",
     vittoria: statoVittoria,
@@ -131,7 +131,8 @@ return <div className='centraTutto'>
       </div>
     </div>
   </div>
-    {app.vittoria && <h1 className='vittoria'>VITTORIA</h1>}
+    {app.vittoria && <h1 className='vittoria'>VITTORIA</h1>} {/* app.vittoria se è true viene mostrato il resto, perchè è un leazy operator = ovvero quando un end è false smette di guardare le condizioni successive */}
+     
 </div>
 }
 
